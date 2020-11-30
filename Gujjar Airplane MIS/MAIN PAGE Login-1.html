@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<link rel="stylesheet" type="text/css" href="Login-1.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+</head>
+<body>
+
+	<!-- HEADER -->
+<header>
+   <nav class="navbar navbar-expand-lg navbar-light bg-light nav-manual header">
+		<div class="container">
+		    <a class="navbar-brand" href="#" style="color: white;">ARS</a>
+		   
+		   	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-nav-demo" aria-expanded="false">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		    </button>
+
+		  	<div class="collapse navbar-collapse" id="bs-nav-demo">
+			    <ul class= "navbar-nav ml-auto">
+			       	<li class="remove-bullets">
+			        	<a href="#">Home</a>
+			      	</li>
+			      	<li class="remove-bullets">
+			        	<a href="feedback.html">Feedback</a>
+			      	</li>
+			    </ul>    
+			</div>
+		</div>
+	</nav>
+</header>
+<!-- END OF HEADER -->
+
+<!-- BODY -->
+<div class="container">
+
+	<div class="row shadow" style="box-shadow: 4px 4px 6px 4px #888888 !important;" style="border:0 !important;">
+		<div class="col-lg-6 div-margin border section1 div-margin">
+			<div class="section1Text">
+				<h1 style="text-shadow: 2px 2px 8px #888888;">Welcome Back!</h1>
+
+				<p>To keep connected with us please login <br> with your personal info</p>
+				<button id="buttonn" type="button" class="btn btn-outline-dark button">SIGN UP</button>
+			</div>
+		</div>
+		
+		<div class="col-lg-6 border section2 sectionh1" style="border:0 !important">
+			<h1 style="text-shadow: 2px 2px 8px #888888;">SIGN IN</h1>
+			<form class="sectionh1">
+				<input class="inputform input1" type="text" name="userName" placeholder="User Name" style="border-bottom: 1px solid grey !important;">
+				<br>
+				<input class="inputform input2" type="password" name="password" placeholder="Password" style="border-bottom: 1px solid grey !important;">
+			</form>
+			<button type="button" class="btn btn-outline-dark button1">SIGN IN</button>
+			<br>
+			<a class="a4">FORGOT PASSWORD?</a>
+		</div>
+	</div>
+</div>
+
+
+	<!-- splash screen -->
+	<div id="splash" class="splash" class="grad">
+		<h1 class="fade-in">Welcome to Airplane Ticket Management System</h1>
+	</div>
+	<!-- splash screen ends -->
+
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+
+
+
+<!-- POP CODE -->
+		<div class="popup">
+			<div  class="cross">
+				<p>&#10006</p>
+			</div>
+
+			<div class="popup-btn1">
+				<button type="button" class="btn btn-outline-dark button1">SIGN IN</button>
+			</div>
+			
+			<div class="popup-btn2">
+				<button type="button" class="btn btn-outline-dark button1">SIGN IN</button>
+			</div>
+		</div>
+
+
+</body>
+
+
+	<script type="text/javascript">
+	const splash = document.querySelector('.splash');
+	document.addEventListener('DOMContentLoaded', (e)=>{
+		setTimeout(()=>{
+			splash.classList.add('display-none');
+		}, 2000);
+	})
+	</script>
+
+	<script type="text/javascript">
+		var button = document.querySelector("#buttonn");
+		var popup = document.querySelector(".popup");
+
+		button.addEventListener("click", function showPopup(){	
+			popup.classList.toggle("display1");
+			// alert("sign up button clicked");
+			// popup.style.display = "flex";
+		});
+	</script>
+
+	<script type="text/javascript">
+		var cross = document.querySelector(".cross");
+		var popup = document.querySelector(".popup");
+		cross.addEventListener("click", function showPopup(){	
+			popup.classList.toggle("display1");
+			// alert("sign up button clicked");
+			// popup.style.display = "flex";
+		})
+
+	</script>
+
+</html>
+
+<!-- <form>
+				<input type="text" name="userName" placeholder="User Name">
+				<input type="password" name="password" placeholder="Password">
+				<input type="text" name="fullName" placeholder="Full Name">
+				<input type="number" name="phNumber" placeholder="Phone Number">
+				<input type="email" name="email" placeholder="E-mail">
+				<input type="date" name="dateOfBirth">
+				<input type="radio" name="gender" >
+			</form> -->
