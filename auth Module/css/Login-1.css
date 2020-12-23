@@ -137,8 +137,8 @@ div p{
 	border-radius: 5px !important;
 	padding-top: 9px !important;
 	padding-bottom: 9px !important;
-	padding-left: 20px !important;
-	padding-right: 20px !important;
+	/* padding-left: 20px !important; */
+	/* padding-right: 20px !important; */
 	box-shadow: 2px 2px 18px #888888;
 	border: 2px solid #0091EA !important;
 }
@@ -183,7 +183,7 @@ div form{
 
 .sectionh1{
 	text-align: center;
-	justify-content: center;
+	/* justify-content: center; */
 }
 
 .a4{
@@ -252,8 +252,9 @@ margin-left: 70px;
 	top: 50%;
 	left: 47%;
 	transform: translate(-50%, -50%);
-	margin-top: 25px;
+	margin-top: 30px;
 	display: none;
+	padding-right: 50px;
 }
 
 .row-popup2{
@@ -261,8 +262,9 @@ margin-left: 70px;
 	border-radius: 12px;
 	display: block;
 	background-color: rgba(0,0,0,0.7); 
-	padding-top: 80px;
-	padding-bottom: 80px;
+	padding-top: 60px;
+	padding-bottom: 60px;
+	
 }
 
 
@@ -337,3 +339,11 @@ margin-left: 70px;
 }
 
 /*POPUP3 CSS ENDS*/
+
+.hide{
+	display: none;
+}
+
+.submit{
+	margin-left: -160px !important;
+}

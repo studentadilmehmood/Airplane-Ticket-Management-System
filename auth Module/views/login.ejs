@@ -48,14 +48,16 @@
 			</div>
 		</div>
 		
-		<div class="col-lg-6 border section2 sectionh1" style="border:0 !important">
+		<div class="col-lg-6 align-items-center justify-content-center border section2 sectionh1" style="border:0 !important">
 			<h1 style="text-shadow: 2px 2px 8px #888888;">SIGN IN</h1>
-			<form class="sectionh1">
+			
+			<form action="/signin" method="POST">
 				<input class="inputform input1" type="text" name="userName" placeholder="User Name" style="border-bottom: 1px solid grey !important;">
 				<br>
 				<input class="inputform input2" type="password" name="password" placeholder="Password" style="border-bottom: 1px solid grey !important;">
+				<input class="submit btn btn-outline-dark button1" type="Submit" style="margin-left=15px;">
 			</form>
-			<button type="button" class="btn btn-outline-dark button1">SIGN IN</button>
+
 			<br>
 			<a class="a4">FORGOT PASSWORD?</a>
 		</div>
@@ -89,7 +91,7 @@
 	<div  class="cross2">
 		<p>&#10006</p>
 	</div>
-		<form class="form" action="/user/add">
+		<form class="form" action="/user/add" method="POST">
 						<input type="text" name="userName" placeholder="User Name" required>
 						<input type="password" name="password" placeholder="Password" required>
 						<input type="text" name="fullName" placeholder="Full Name" required="">
@@ -99,17 +101,26 @@
 							<div>	
 								
 								<label  class="radio">Male 
-									<input class="radio" type="radio" name="gender" required style="margin-right: 12px;">
+									<input class="radio" type="radio" name="gender" value="Male" required style="margin-right: 12px;">
 								</label>
 								
 								<label class="radio" >Female 
-									<input class="radio" type="radio" name="gender" required>
+									<input class="radio" type="radio" name="gender" value="Female" required>
 								</label>
 								
 							</div>
 						<input type="text" name="address" placeholder="Address" required>
-						<input type="text" name="city" placeholder="City" required>
-						<input type="text" name="country" placeholder="Country" required>
+						
+						<div>
+						<!-- <label class="hide">Company
+							<input type="radio" name="type" value="Company" required>	
+						</label> -->
+						<label class="hide">User
+							<input type="radio" name="type" value="User" checked required>
+						</label>
+						</div>
+			
+				<input type="Submit">
 			</form>
 	</div>
 	</div>
@@ -123,13 +134,20 @@
 	<div  class="cross3">
 		<p>&#10006</p>
 	</div>
-		<form>
-			<input type="name" name="username" required placeholder="User Name">
+		<form method="POST" action="/user/add">
+			<input type="name" name="userName" required placeholder="User Name">
 			<input type="password" name="password" required placeholder="Password">
 			<input type="email" name="email" required placeholder="E-mail">
-			<input type="number" name="number" required placeholder="Number">
+			<input type="number" name="phNumber" required placeholder="Number">
 			<input type="name" name="address" required placeholder="Address">
 			<input type="name" name="companyName" required placeholder="Company Name">
+			<label class="hide">Company
+					<input type="radio" name="type" value="Company" checked>	
+			</label>
+			<!-- <label>User
+				<input type="radio" name="type" value="User">
+			</label> -->
+		<input type="Submit">
 		</form>
 	</div>
 	</div>
